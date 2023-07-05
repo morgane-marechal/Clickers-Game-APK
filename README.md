@@ -1,2 +1,2 @@
-# test-cordova
-test with cordova 
+# Clickers APK
+Clickers game with cordova
