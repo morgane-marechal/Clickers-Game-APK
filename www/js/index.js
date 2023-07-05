@@ -125,6 +125,10 @@ function newClick() {
 prixSmall.innerHTML = disabled_btn_small;
 
 //fonction pour augmenter la valeure du click
+btnSmall.addEventListener("click", (e) =>{
+small();
+})
+
 function small() {
     valueClick = valueClick + 1;//la valeure du click augmente
     displayClick.innerHTML = valueClick;
@@ -142,6 +146,10 @@ let valueMedium = 2;
 let disabled_btn_medium = 50;
 prixMedium.innerHTML = disabled_btn_medium;
 
+btnMedium.addEventListener("click", (e) =>{
+medium();
+})
+
 function medium() {
     inc_per_second = inc_per_second + valueMedium;
     scoreClick = scoreClick - disabled_btn_medium;//on soustrait prix du click
@@ -155,6 +163,10 @@ function medium() {
 
 let disabled_btn_big = 500;
 prixBig.innerHTML = disabled_btn_big;
+
+btnBig.addEventListener("click", (e) =>{
+big();
+})
 
 function big() {
     inc_per_second = inc_per_second * 2;
@@ -171,6 +183,7 @@ function big() {
 function addLocalStorage() {
     var strScore = scoreClick.toString();//données sur le score
     //console.log("score " + strScore);
+
     localStorage.setItem('score', strScore);
     localStorage.setItem('valueClick', valueClick);
     localStorage.setItem('disabled_btn_small', disabled_btn_small);
