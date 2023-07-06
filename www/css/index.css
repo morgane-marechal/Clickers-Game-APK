@@ -30,6 +30,7 @@
             justify-content: center;
             align-items: center;
             width:95%;
+            padding-top: 4%;
         }
 
         #elements{
@@ -61,11 +62,11 @@
 
         #click-me{
             border:none;
-            margin-top: 2%;
-            width:150px;
-            height:150px;
-            border-radius: 50%;
-            font-size: 2.8em;
+            margin: 2%0%;
+            width:100px;
+            height:100px;
+            border-radius: 15px;
+            font-size: 1.6em;
             color:#e66465;
             text-transform: uppercase;
             text-shadow: 1px 1px white, -1px -1px #444;
@@ -75,8 +76,25 @@
             font-family: 'Mukta', sans-serif;
         }
         #click-me:hover{
-            background-color: #f6d7c5;
+            background-color: #fad3bc;
         }
+
+  
+          #click-me:active{
+              box-shadow: 1px 1px white, -1px -1px #444;
+              background-color:white;
+            }
+  
+            #click-me:enabled,#click-me[enabled]{
+              background-color: rgb(252, 188, 109);
+              color: #672a60;
+            }
+
+        
+    /*     #click-me:active{
+            background: linear-gradient(#ef6161, #fabe9c);
+
+        } */
 
         #display-score{
             font-size: 3em;
@@ -94,9 +112,7 @@
             font-family: 'Mukta', sans-serif;
         }
 
-        #click-me:active{
-            background: linear-gradient(#ef6161, #fabe9c);
-        }
+
 
         #smallAdd, #mediumAdd, #bigAdd{
             height:100px;
@@ -117,6 +133,20 @@
         #smallAdd:active, #mediumAdd:active, #bigAdd:active{
             box-shadow: 1px 1px white, -1px -1px #444;
             background-color:white;
+          }
+
+          #smallAdd:disabled,#smallAdd[disabled],
+          #mediumAdd:disabled,#mediumAdd[disabled],
+          #bigAdd:disabled, #bigAdd[disabled]{
+            background-color: rgba(253, 148, 185, 0.2);
+            color: #5c2f59;
+          }
+
+          #smallAdd:enabled,#smallAdd[enabled],
+          #mediumAdd:enabled,#mediumAdd[enabled],
+          #bigAdd:enabled, #bigAdd[enabled]{
+            background-color: rgb(252, 188, 109);
+            color: #672a60;
           }
 
         #btnreset{
@@ -156,7 +186,7 @@
     }
 
         @media (min-width: 460px) {
-            html{
+             html{
                    padding:0;
                    margin:0;
                    background: linear-gradient(#e5b091,#e66465,  #abe4b2);
@@ -209,24 +239,7 @@
                    cursor: pointer;
                }
 
-               #click-me{
-                   border:none;
-                   margin-top: 2%;
-                   width:150px;
-                   height:150px;
-                   border-radius: 50%;
-                   font-size: 3em;
-                   color:#e66465;
-                   text-transform: uppercase;
-                   text-shadow: 1px 1px white, -1px -1px #444;
-                   /* background: linear-gradient(#e66465, #f1af89);  */
-                   background-color: #e5b091;
-                   cursor: pointer;
-                   font-family: 'Mukta', sans-serif;
-               }
-               #click-me:hover{
-                   background-color: #f6d7c5;
-               }
+              
 
                #display-score{
                    font-size: 6em;
@@ -244,9 +257,7 @@
                    font-family: 'Mukta', sans-serif;
                }
 
-               #click-me:active{
-                   background: linear-gradient(#ef6161, #fabe9c);
-               }
+
 
                #smallAdd, #mediumAdd, #bigAdd{
                    height:150px;
@@ -265,7 +276,7 @@
                }
 
                #smallAdd:active, #mediumAdd:active, #bigAdd:active{
-                   box-shadow: 1px 1px white, -1px -1px #444;
+                   box-shadow: 1px 1px white, -1px -1px #e58beb;
                  }
 
                #btnreset{
@@ -301,7 +312,7 @@
                    color: #d4f5d8;
                    text-align: center;
                    height:150px;
-               }
+               } 
     }
 
 
