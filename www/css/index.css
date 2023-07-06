@@ -54,6 +54,18 @@
             filter: brightness(130%);
         }
 
+        #candy_purple{
+            width:20%;
+        }
+
+        #candy_active{
+            filter: brightness(180%);
+        }
+
+        #candy_purple:hover{
+            filter: brightness(130%);
+        }
+
         #audio-player-container{
             position:absolute;
             margin:6%20%1%80%;
@@ -74,6 +86,7 @@
             background-color: #e5b091;
             cursor: pointer;
             font-family: 'Mukta', sans-serif;
+            z-index: 10;
         }
         #click-me:hover{
             background-color: #fad3bc;

@@ -3,12 +3,29 @@ console.log("animate-file");
 const lollypop = document.getElementById("lollypop");
 const heart = document.getElementById("heart");
 const btnBonbon = document.getElementById("btn-img");
+const purpleCandy = document.getElementById("candy_purple");
 
 
 const lollyTumbling = [
     { transform: 'rotate(0) translate3D(0, 0, 0', color: '#000' },
     { color: '#431236', offset: 0.3 },
     { transform: 'rotate(360deg) translate3D(0, 0, 0)', color: '#000' }
+];
+
+const purpleCandyTumbling = [
+        {
+          opacity: 0, 
+          transform: 'rotate(0)',
+          easing: "ease-out",
+          transform: "translateY(-1000%)" 
+        },
+        {
+          opacity: 1,
+          transform: 'rotate(360)',
+          transform: "translateY(300%)",
+          transform: "translateX(100%)" 
+        },
+
 ];
 
 
@@ -22,6 +39,16 @@ const disappearCandy = [
 const reappearCandy = [
     { transform: "rotate(0) scale(0)" },
     { transform: "rotate(360deg) scale(1)" },
+];
+
+const disappearCandyPurple = [
+    { transform: " scale(1)" },
+    { transform: " scale(0)" },
+];
+
+const reappearCandyPurple = [
+    { transform: " scale(0)" },
+    { transform: " scale(1)" },
 ];
 
 const lollyTiming = {
@@ -61,9 +88,26 @@ lollypop.addEventListener("click", () => {
 
 });
 
+//-----------click pour faire disparaitre purple_candy
+
+purpleCandy.addEventListener("click", () => {
+    audioCartoon.play();
+    purpleCandy.animate(disappearCandyPurple, desappearTiming);
+    purpleCandy.animate(noWhere, noneTime);
+    purpleCandy.animate(reappearCandyPurple, reappearTiming);
+    inc_per_second = inc_per_second + 1;
+
+});
+
 // ------------- animation lollypop -----------
 lollypop.animate(
     lollyTumbling,
+    lollyTiming
+)
+
+// ------------- animation pour purple candy -----------
+purpleCandy.animate(
+    purpleCandyTumbling,
     lollyTiming
 )
 
@@ -85,6 +129,12 @@ heart.animate(
     popCandyTime
 )
 
+
+
+
+
+
+
 //----------control music------
 
 const audioMusic = document.getElementById("audio-music");
@@ -100,30 +150,30 @@ blocMusic.addEventListener("click", () => {
      }
 });
 
-const intervalMusic=setInterval(PlayMusic, 1000);
+//const intervalMusic=setInterval(PlayMusic, 1000);
 
-function PlayMusic(){
-    if (musicRunning===true){
-            if (inc_per_second<=3){
-            audioMusic.playbackRate=0.7;
-            audioMusic.play();
-        }else if(inc_per_second<=6){
-            audioMusic.playbackRate=0.8;
-            audioMusic.play();
-        }else if(inc_per_second<=10){
-            audioMusic.playbackRate=0.9;
-            audioMusic.play();
-        }else if(inc_per_second<=15){
-            audioMusic.playbackRate=1;
-            audioMusic.play();
-        }else if(inc_per_second<=20){
-            audioMusic.playbackRate=1.1;
-            audioMusic.play();
-        }else if(inc_per_second<=25){
-            audioMusic.playbackRate=1.2;
-            audioMusic.play();
-        }
-    }else if(musicRunning===false){
-        audioMusic.pause();
-    }
-}
+// function PlayMusic(){
+//     if (musicRunning===true){
+//             if (inc_per_second<=3){
+//             audioMusic.playbackRate=0.7;
+//             audioMusic.play();
+//         }else if(inc_per_second<=6){
+//             audioMusic.playbackRate=0.8;
+//             audioMusic.play();
+//         }else if(inc_per_second<=10){
+//             audioMusic.playbackRate=0.9;
+//             audioMusic.play();
+//         }else if(inc_per_second<=15){
+//             audioMusic.playbackRate=1;
+//             audioMusic.play();
+//         }else if(inc_per_second<=20){
+//             audioMusic.playbackRate=1.1;
+//             audioMusic.play();
+//         }else if(inc_per_second<=25){
+//             audioMusic.playbackRate=1.2;
+//             audioMusic.play();
+//         }
+//     }else if(musicRunning===false){
+//         audioMusic.pause();
+//     }
+// }
