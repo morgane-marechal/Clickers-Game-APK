@@ -46,7 +46,7 @@
                 </script>
                 <lottie-player onclick="PlayMusic()" src="https://assets2.lottiefiles.com/packages/lf20_NUz0ZU.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay>
                     <input class="audio" type="button" value="PLAY" onclick="play4()" >
-                    <audio id="audio-music" src="back_music.mp3" loop>
+                    <audio id="musicSound" src="music.mp3" loop>
                     </audio>
                 </lottie-player>
             </div>
@@ -84,9 +84,8 @@
         
     </div>
     <footer>
-        <audio id="audio-click" src="game.wav"></audio>
-        <audio id="audio-up" src="error.wav"></audio>
-        <audio id="audio-cartoon" src="cartoon.wav"></audio>
+        <audio id="clickSound" src="sounds/click.wav"></audio>
+        <audio id="lollipopSound" src="sounds/lollipop.wav"></audio>
 
         <script defer type="text/javascript" src="js/index.js"></script>
         <script defer type="text/javascript" src="js/animate.js"></script>

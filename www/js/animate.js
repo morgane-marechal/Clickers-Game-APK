@@ -137,7 +137,7 @@ heart.animate(
 
 //----------control music------
 
-const audioMusic = document.getElementById("audio-music");
+const audioMusic = document.getElementById("clickSound");
 const blocMusic = document.getElementById("audio-player-container");
 
 blocMusic.addEventListener("click", () => {
@@ -151,6 +151,10 @@ blocMusic.addEventListener("click", () => {
 });
 
 //const intervalMusic=setInterval(PlayMusic, 1000);
+
+function playMusic() {
+    console.log("music ok");
+}
 
 // function PlayMusic(){
 //     if (musicRunning===true){
